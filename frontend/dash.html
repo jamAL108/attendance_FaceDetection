@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="dash.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Dashboard Sidebar Menu</title> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="imagii">
+                    <img src="hello.png" alt="">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">DY Patil</span>
+                    <span class="profession">Attendance System</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#" class="active">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Home</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="myaccount.html">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">My account</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon'></i>
+                            <span class="text nav-text">Notifications</span>
+                        </a>
+                    </li>
+                    <li class="nav-links">
+                        <a href="index.html" onclick="logout()">
+                            <i class='bx bx-log-out icon' ></i>
+                            <span class="text nav-text">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="home">
+        <div class="text">
+          <!-- <img class="dylogo" src="backi.jpg" width=100% height=100% alt="">  -->
+            <div class="flex-container">
+        <div class="flex-box">
+            <div class="first">
+                <div class="image">
+                <img src="add-user.jpg" width=80px height=80px alt="">
+                </div>
+                <h3>Add new student's details here . Please upload a current photo copy of student !...</h3>
+                 <div class="buttons">
+                <a href="a_s.html"><button type="submit" class="btn">Add Student</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="first">
+                <div class="image">
+                <img src="user--list.png" width=80px height=80px alt="user-list">
+                </div>
+                <h3>view the details of Student's from your respective class. You can delete a student or make any changes from here !... </h3> 
+                <div class="buttons">
+                <a href="view_student.html"><button class="btn">View Student</button></a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="first">
+                <div class="image">
+              <img src="face-scan.jpg" width=80px height=80px alt="face-scan">
+                </div>
+                <h3>A webcam must!. Multiple faces can be recognized at a single time . Don't focus the camera in light exposure area it might not work. </h3> 
+                <div class="buttons">
+                <a href="#"><button class="btn">Take Attendance</button></a>
+             </div>
+            </div>
+        </div>
+        <div class="flex-box">
+            <div class="first">
+                <div class="image">
+               <img src="vie-attendance.jpg" width=80px height=80px alt="view attendance">
+             </div>
+              <h3>view student's attendance , You can make any changes in the following detected facial attendances </h3>
+               <div class="buttons">
+              <a href="./csv-to-html/ind.html"> <button class="btn">View Attendance</button></a>
+            </div>
+        </div>
+        </div>
+    </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    <script src="firebase.js"></script>
+    <script src="dash.js"></script>
+
+</body>
+</html>

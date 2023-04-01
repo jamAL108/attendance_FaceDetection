@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LOGIN</title>
+        <link rel="stylesheet" href="https://cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5gLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJ0vhRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qx08w=="
+        crossorigin="anonymous">
+        
+        
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+        ></script>
+        <link href="./index.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+               <div class="form-container">
+               <div class="signin">
+          
+            <form onsubmit="login()" id="loginForm" >
+                <h3 class="title">Teachers Login</h3>
+               <small><span id="error" style="color: red"></span></small>
+               
+                <div class="input-fields">
+                    <i class="fas fa-user"></i>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" >
+                </div>
+                <div class="input-fields">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" >
+                </div>
+            
+               <button type="submit" class="btn btn-primary">Login</button>
+
+           
+            </form>
+        </div>
+      
+        <div class="panel-container">
+           <div class="panel panel-left"></div>
+        </div>
+        </div>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+        <script src="firebase.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

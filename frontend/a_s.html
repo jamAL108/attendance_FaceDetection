@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="as.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"> -->
+    <title>Add new student</title>
+</head>
+<body>
+     <section>
+     <div class="container">
+        <header>Add new student</header>
+
+        <form action="">
+            <div class="form first">
+            <div class="details">
+                <span class="title">student's personal details</span>
+
+                <div class="fields">
+                    <div class="input-fields">
+                        <label>First Name</label>
+                        <input type="text" name="firstname" placeholder="enter first name" required>
+
+                    </div>
+                    <div class="input-fields">
+                        <label>Last Name</label>
+                        <input type="text" name="lastname" placeholder="enter Last Name" required>
+
+                    </div>
+                    <div class="input-fields">
+                        <label>date-of-birth</label>
+                        <input type="date" name="DOB" placeholder="Enter Birth date" required>
+                             
+                    </div>
+                    
+                     <div class="input-fields">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="enter studenst Main id" required> 
+                       </div> 
+                        <div class="input-fields">
+                            <label>phone number</label>
+                            <input type="number" name="phonenumber" placeholder="enter phone number" required> 
+                    
+                    </div>
+                    <div class="input-fields">
+                        <label for="priority">Gender</label>
+                        <select id="priority" name="gender">
+                            <option value="1" selected>select gender</option>
+                            <option value="2">Male</option>
+                            <option value="3">Female</option>
+                        </select>
+                        <!-- <label>gender</label>
+                        <input type="text" placeholder="enter gender" required>  -->
+            </div>
+            <div class="input-fields">
+                <label>roll number</label>
+                 <input type="text" name="rollnumber" placeholder="enter roll_number" required> 
+                    </div>
+                     <div class="input_fields">
+                           <label>student's image</label>
+                   <input class="file-input" name="image" type="file" onchange="readURL(this)" accept="Image/*"> 
+
+                    </div> 
+          <div class="input-fields">
+               <label>branch</label>
+                <input type="text" name="branch" placeholder="enter branch" required> 
+                 </div>
+              <!-- <div class="input_fields">
+                <label></label>
+                <input class="file-input" type="file" onchange="readURL(this)" accept="Image/*"> 
+        
+                 </div> -->
+             </div> 
+               </div>
+               <div class="details ID">
+                <span class="title">other details</span>
+                <div class="fields">
+                    <div class="input-fields">
+                        <label>father's name</label>
+                        <input type="text" name="fathername" placeholder="enter fathers name" required> 
+                
+                </div>
+                <div class="input-fields">
+                    <label>father's occupation</label>
+                    <input type="text" name="Foccupation" placeholder="enter father'occupation" required> 
+            
+              </div>
+                <div class="input-fields">
+                    <label>mother's name:</label>
+                    <input type="text" name="mothername" placeholder="enter mother name" required> 
+            
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+      <button class="check">submit</button>
+    <span class="overlay"></span>
+
+    <div class="modal-box">
+        <i class="fa-regular fa-circle-check"></i>
+        <h2>completed</h2>
+        <h3>Student successfully registered</h3>
+        <div class="buttons">
+            <button class="close-btn">Add more Students</button>
+            <a href="dash.html"> <button class="home-redirect">Go to HomePage</button></a> 
+        </div>
+    </div>
+</section>
+    <script>
+        const section = document.querySelector("section"),
+        overlay = document.querySelector(".overlay"),
+        check = document.querySelector(".check"),
+        closebtn = document.querySelector(".close-btn");
+    // homebtn = documnet.querySelector(".home-redirect"); -->
+
+        check.addEventListener("click",() => section.ClassList.add("active"));
+        overlay.addEventListener("click",() => section.ClassList.remove("active"));
+        closebtn.addEventListener("click" ,() => section.ClassList.remove("active"));
+    </script>
+</body>
+</html>
